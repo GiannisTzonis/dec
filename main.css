@@ -6,6 +6,6 @@ body {
   background: rgb(6, 6, 97);
 }
 
-/* .typingText {
-  width: 25%;
-} */
+#screen {
+  margin: auto;
+}
