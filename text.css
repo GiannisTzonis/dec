@@ -3,7 +3,7 @@ pre {
   font-size: 18px;
   font-family: monospace;
   font-weight: 300;
-  width: 100%;
+  width: 70%;
 }
 
 #tagline {
@@ -14,5 +14,5 @@ pre {
 #pow-txt {
   display: none;
   font-weight: 100;
-  color: #e3e3e3 !important;
+  /* color: #e3e3e3 !important; */
 }
