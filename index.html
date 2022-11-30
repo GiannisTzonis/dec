@@ -6,8 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giannis Tzonis Portfolio</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="text.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="t.min.js"></script>
   </head>
   <body>
+    <div class="typingText">
+      <pre id="main">
+            Giannis Tzonis
+            <ins>
+            <span id="pow-txt">
+            ---[Tzonis Designs!]
+            </span>
+            </ins>
+            <span id="tagline">
+            my name is Giannis Tzonis and I am a software engineer based in Preveza, Greece. I enjoy creating beautiful digital environments(experiences), useful applications and creative Web Designs. I craft successful websites that are fast, easy to use, and built with best practices.
+            <ins>1.5</ins>
+            trying to build elegant solutions for all curious learners
+            out there
+            </span>
+            <del></del><del id="pow-trigger">
+            </del>
+            </pre>
+    </div>
+
+    <script>
+      $("#main").t({
+        caret: '<span style="color:hotpink;">•</span>',
+        typing: function (elm, chr) {
+          if (chr.match(/\-trigger/))
+            $("#pow-txt").show().delay(500).fadeOut(0);
+        },
+      });
+    </script>
+
     <script src="script.js"></script>
   </body>
 </html>
