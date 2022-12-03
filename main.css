@@ -20,6 +20,6 @@ body {
   margin-top: 150px;
 }
 
-.radar {
-  position: fixed;
+.radarBox {
+  height: 100px;
 }

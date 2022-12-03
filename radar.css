@@ -180,11 +180,23 @@ body {
 .gps_signal:nth-child(4) {
   left: 75%;
   top: 60%;
-  animation-timing-function: steps(6);
+  animation-timing-function: steps(5);
 }
 
 .gps_signal:nth-child(5) {
   left: 55%;
   top: 50%;
   animation-timing-function: steps(6);
+}
+
+.gps_signal:nth-child(6) {
+  left: 25%;
+  top: 20%;
+  animation-timing-function: steps(3);
+}
+
+.gps_signal:nth-child(7) {
+  left: 75%;
+  top: 10%;
+  animation-timing-function: steps(7);
 }
