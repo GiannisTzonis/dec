@@ -1,0 +1,190 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  font-size: 16px;
+  margin: 0;
+  background: #fff;
+  color: #000;
+}
+
+.radar-box-area {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #212121;
+}
+
+.radar-box {
+  width: calc(100vh - 50px);
+  height: calc(100vh - 50px);
+  position: relative;
+  border-radius: 50%;
+  background-color: green;
+  overflow: hidden;
+  background-image: radial-gradient(
+    circle,
+    #024e02 5%,
+    #0f0,
+    #024e02 6%,
+    #024e02 10%,
+    #0f0,
+    #024e02 11%,
+    #024e02 15%,
+    #0f0,
+    #024e02 16%,
+    #024e02 20%,
+    #0f0,
+    #024e02 21%,
+    #024e02 25%,
+    #0f0,
+    #024e02 26%,
+    #024e02 30%,
+    #0f0,
+    #024e02 31%,
+    #024e02 35%,
+    #0f0,
+    #024e02 36%,
+    #024e02 40%,
+    #0f0,
+    #024e02 41%,
+    #024e02 45%,
+    #0f0,
+    #024e02 46%,
+    #024e02 50%,
+    #0f0,
+    #024e02 51%,
+    #024e02 55%,
+    #0f0,
+    #024e02 56%,
+    #024e02 60%,
+    #0f0,
+    #024e02 61%,
+    #024e02 65%,
+    #0f0,
+    #024e02 66%,
+    #024e02 70%,
+    #0f0,
+    #024e02 71%,
+    #024e02 75%,
+    #0f0,
+    #024e02 76%,
+    #024e02 80%,
+    #0f0,
+    #024e02 81%
+  );
+}
+
+@media only screen and (orientation: portrait) {
+  .radar-box {
+    width: calc(100vw - 50px);
+    height: calc(100vw - 50px);
+  }
+}
+
+.radar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 40%;
+  transform: translateY(-100%);
+  border-bottom: 2px solid #0f0;
+  background: linear-gradient(325deg, #0f0, transparent, transparent);
+  animation: 5s radarAnim;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: left bottom;
+  z-index: 1;
+}
+
+@keyframes radarAnim {
+  from {
+    transform: translateY(-100%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-100%) rotate(360deg);
+  }
+}
+
+.gps_signal {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  width: 25px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #0f0;
+  transform: rotate(45deg);
+  visibility: hidden;
+  animation: 10s gps_signal;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-size: 1.5rem;
+  color: white;
+}
+
+@keyframes gps_signal {
+  0% {
+    visibility: hidden;
+  }
+  5% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.gps_signal:after,
+.gps_signal:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 15px;
+  border: 2px solid #0f0;
+  left: 50%;
+  margin-left: -5px;
+  background: #024e02;
+}
+
+.gps_signal:after {
+  bottom: 100%;
+}
+
+.gps_signal:before {
+  top: 100%;
+}
+
+.gps_signal:nth-child(2) {
+  left: 50%;
+  top: 25%;
+  animation-timing-function: steps(2);
+}
+
+.gps_signal:nth-child(3) {
+  left: 25%;
+  top: 50%;
+  animation-timing-function: steps(4);
+}
+
+.gps_signal:nth-child(4) {
+  left: 75%;
+  top: 60%;
+  animation-timing-function: steps(6);
+}
+
+.gps_signal:nth-child(5) {
+  left: 55%;
+  top: 50%;
+  animation-timing-function: steps(6);
+}
